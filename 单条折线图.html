@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单条折线图</title>
+    <style>
+        #echarts{
+            width: 1200px;
+            height: 600px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<script src="echarts(1).js"></script>
+<body>
+    <div id="echarts">
+
+    </div>
+</body>
+<script>
+    let ech = echarts.init(document.getElementById('echarts'))
+
+    option = {
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            type: 'line'
+        }]
+    };
+
+    ech.setOption(option)
+</script>
+</html>
